@@ -1,0 +1,41 @@
+# el nombre del workflow
+name: Python linting
+# le decimos cuando se dispara( cuando se hace un push en la rama master, cuando se hace pull request
+on:
+  push:
+    branches: [master]
+    pull_request:
+    #el workflow_dispatch es que lo puedes activar con un boton
+    workflow_dispatch:
+# los trabajos que vamos a hacer   
+Job:
+  #el nombre del primer trabajo es build y vamos a setear nuestro runner que correra la action
+  build:
+    runs-on: ubuntu-latest
+    #pasos del job build
+    steps:
+      #este ayuda al runner a pillar el commit actual para que se lo descargue y tenga acceso al codigo
+      - uses: actions/checkout@v2
+      #especificamos el nombre de un paso en concreto para hacerlo mas human-friendly
+      - name: set up Python 3.8
+        #otra accion de github (estas se pueden buscar en el marketplace o directamente buscarla en google y copiar su suage
+        uses: actions/setup-python@v2
+          #parametros de la action
+          with:
+            python-version: '3.6.9'
+            #aqui ejecutamos en el el paso de setear python
+       - run: |
+            print("exito en la pipeline")
+       
+       - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8
+          pip install pylint
+        
+        - name: Lint with Pylint
+        run: |
+          pylint src
+       
+      
+      
