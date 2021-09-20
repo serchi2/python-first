@@ -61,8 +61,10 @@ def tutorial():
 
     print(funcionPrueba("hola"))
 
-    pruebaInput = input("Prueba input: ")
-    print("imprimo lo que me das por input: "+ pruebaInput)
+    #pruebaInput = input("Prueba input: ")
+    #print("imprimo lo que me das por input: "+ pruebaInput)
 print("solo se imprime lo que esta fuera de un def")
 tutorial()
+#buena practica es borrar el merge cuando se ha terminado
+print("solo quiero ver si al hacer un commit sobre esta rama pasa algo")
 
