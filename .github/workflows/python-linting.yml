@@ -3,9 +3,9 @@ name: Python linting
 on:
   push:
     branches: [master]
-    pull_request:
+  pull_request:
     #el workflow_dispatch es que lo puedes activar con un boton
-    workflow_dispatch:
+  workflow_dispatch:
 # los trabajos que vamos a hacer   
 jobs:
   #el nombre del primer trabajo es build y vamos a setear nuestro runner que correra la action
@@ -22,6 +22,7 @@ jobs:
         with:
             python-version: '3.6.9'
             #aqui ejecutamos en el el paso de setear python
+      - name: aqui ejecuto el print
         run: print("exito en la pipeline")
       - name: Install dependencies
         run: |
