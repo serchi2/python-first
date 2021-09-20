@@ -31,3 +31,9 @@ diccionario.update({‘key’:’valor’}): Inserta una determinada key o actua
 «key» in diccionario: Devuelve verdadero (True) o falso (False) si la key (no los valores) existe en el diccionario.
 «definicion» in diccionario.values(): Devuelve verdadero (True) o falso (False) si definición existe en el diccionario (no como key).'''
 #identacion
+pruebaIf=1
+if(pruebaIf==1):
+    print("obvio que iba a salir esto")
+else:
+    print("eto que eeeeeeeeee")
+
