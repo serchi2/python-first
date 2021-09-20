@@ -1,5 +1,7 @@
 #Comentario, empezamos el picoteo en python
 # el hola mundo mitiquisiimo
+def funcionPrueba(name):
+    return ("funcionPrueba "+ name)
 print("hola mundo");
 #Variables, en java seria int i = 1 aqui es:
 variable1 = int(2)
@@ -36,4 +38,24 @@ if(pruebaIf==1):
     print("obvio que iba a salir esto")
 else:
     print("eto que eeeeeeeeee")
+
+#Bucle while en python
+vuelta =1
+while vuelta <4:
+  print("vuelta"+str(vuelta))
+  vuelta+=1
+#en los bucles for no es posible hacer bucle infinito porque automaticamente te suma 1
+forelta=1
+for forelta in range(1,6):
+  print ("forelta "+str(forelta))
+
+import os
+import calculadora
+print(os.getuid())
+resulModu=calculadora.calcu2(vuelta,forelta)
+print (vuelta)
+print (forelta)
+print(resulModu)
+
+print(funcionPrueba("hola"))
 
