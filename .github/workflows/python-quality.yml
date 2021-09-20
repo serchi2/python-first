@@ -1,5 +1,6 @@
 name: first-workflow
-on: [push]
+on: 
+  workflow_dispatch:
 jobs:
   check-python-version:
     runs-on: ubuntu-latest
