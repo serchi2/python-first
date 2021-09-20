@@ -36,7 +36,9 @@ jobs:
         
       - name: Lint with Pylint
         run: |
+          pylint calculadora.py
           pylint -v main.py
+          
        
       
       
