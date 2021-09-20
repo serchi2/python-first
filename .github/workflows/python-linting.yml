@@ -23,7 +23,8 @@ jobs:
             python-version: '3.6.9'
             #aqui ejecutamos en el el paso de setear python
       - name: aqui ejecuto el print
-        run: print("exito en la pipeline")
+        #run: print("exito en la pipeline")
+        run: echo hola buenos dias
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
