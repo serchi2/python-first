@@ -2,7 +2,7 @@ name: Python linting
 # le decimos cuando se dispara( cuando se hace un push en la rama master, cuando se hace pull request
 on:
   push:
-    branches: [master]
+    branches: [main]
   pull_request:
     #el workflow_dispatch es que lo puedes activar con un boton
   workflow_dispatch:
@@ -33,7 +33,7 @@ jobs:
         
       - name: Lint with Pylint
         run: |
-          pylint src
+          pylint main.py
        
       
       
