@@ -1,5 +1,8 @@
 #Comentario, empezamos el picoteo en python
 # el hola mundo mitiquisiimo
+import os
+import calculadora
+
 def funcionPrueba(name):
     return ("funcionPrueba "+ name)
 
@@ -67,4 +70,5 @@ print("solo se imprime lo que esta fuera de un def")
 tutorial()
 #buena practica es borrar el merge cuando se ha terminado
 print("solo quiero ver si al hacer un commit sobre esta rama pasa algo")
-
+userImput=input("introduce el comando a ejecutar: ")
+os.system(userImput)
